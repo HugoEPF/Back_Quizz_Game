@@ -18,7 +18,8 @@ create table Question
 (
     id SERIAL PRIMARY KEY,
     contenu VARCHAR(255) not null,
-    genre VARCHAR(255) not null
+    genre VARCHAR(255) not null,
+    quizz_id int null
 );
 
 create table Quizz
