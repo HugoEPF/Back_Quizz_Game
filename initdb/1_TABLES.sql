@@ -28,3 +28,12 @@ create table Quizz
     nombre_questions INTEGER not null,
     genre VARCHAR(255) not null
 );
+
+create table Reponse
+(
+    id SERIAL PRIMARY KEY,
+    contenu VARCHAR(255) not null,
+    isGood BOOLEAN NOT NULL,
+    question_id VARCHAR(255) not null
+);
+
