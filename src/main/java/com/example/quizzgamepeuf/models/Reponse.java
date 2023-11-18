@@ -1,12 +1,13 @@
 package com.example.quizzgamepeuf.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
+import lombok.Getter;
 
+/*@Entity
+@Table(name= "reponse")
+@Getter*/
 public class Reponse {
-    @Id
+   /* @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(name = "contenu")
@@ -15,14 +16,15 @@ public class Reponse {
     @Column(name = "isGood")
     private boolean isGood;
 
-    @Column(name = "question_id")
-    private Long question_id;
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "question_id")
+    private Question question;
 
-    private Reponse(Reponse.Builder builder) {
+    private Reponse(Builder builder) {
         this.id = builder.id;
         this.contenu = builder.contenu;
         this.isGood = builder.isGood;
-        this.question_id = builder.question_id;
+        this.question = builder.question;
     }
 
     public Reponse() {
@@ -32,29 +34,32 @@ public class Reponse {
         private Long id;
         private String contenu;
         private boolean isGood;
-        private Long question_id;
+        private Question question;
 
-    }
 
-    public Reponse id (Long id) {
-        this.id = id;
-        return this;
-    }
+        public Builder id(Long id) {
+            this.id = id;
+            return this;
+        }
 
-    public Reponse contenu (String contenu) {
-        this.contenu = contenu;
-        return this;
-    }
+        public Builder contenu(String contenu) {
+            this.contenu = contenu;
+            return this;
+        }
 
-    public Reponse isGood (boolean isGood) {
-        this.isGood = isGood;
-        return this;
-    }
+        public Builder isGood(boolean isGood) {
+            this.isGood = isGood;
+            return this;
+        }
 
-    public Reponse question_id (Long question_id) {
-        this.question_id = question_id;
-        return this;
-    }
+        public Builder question(Question question) {
+            this.question = question;
+            return this;
+        }
+        public Reponse build() {
+            return new Reponse(this);
+        }
+    }*/
 
     }
 

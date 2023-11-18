@@ -1,4 +1,18 @@
 package com.example.quizzgamepeuf.DAO;
 
-public class QuestionDao {
+import com.example.quizzgamepeuf.models.Question;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+import java.util.List;
+
+@Repository
+    public interface QuestionDao extends JpaRepository<Question, Long> {
+    @Query("SELECT q FROM Question q WHERE q.genre = :genre AND q.id = :id")
+    List<Question> findQuestionByQuizzGenreId(@Param("genre") String genre, @Param("id") Long id);
+
+    @Query("SELECT q FROM Question q WHERE q.genre = :genre")
+    List<Question> findIdByGenre(@Param("genre") String genre);
 }
