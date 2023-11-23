@@ -16,19 +16,20 @@ import java.util.List;
 public class QuestionController {
     @Autowired
     private QuestionService questionService;
-    @GetMapping("")
+    @GetMapping("all")
     public List<Question> listQuestion() {
         return questionService.findAll();
     }
 
-    @GetMapping("{genre}/{id}")
-    public List<Question> listQuestionByGenreId(@PathVariable String genre, @PathVariable Long id){
-        return questionService.searchQuestionByQuizzGenreId(genre, id);
-        }
 
-    @GetMapping("{genre}")
-    public List<Question> findIdByGenre(@PathVariable String genre){
-        return questionService.findIdByGenre(genre);
+    @GetMapping("byGenre/{genre}")
+    public List<Question> findQuestionsByGenre(@PathVariable String genre){
+        return questionService.findQuestionsByGenre(genre);
+    }
+
+    @GetMapping("byId/{id}")
+    public List<Question> findQuestionsById(@PathVariable Long id){
+        return questionService.findQuestionsById(id);
     }
 
 }

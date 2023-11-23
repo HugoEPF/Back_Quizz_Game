@@ -18,15 +18,15 @@ public class QuestionService {
         return questions;
     }
 
-    public List<Question> searchQuestionByQuizzGenreId(String genre, Long id) {
-        Iterable<Question> it = questionDao.findQuestionByQuizzGenreId(genre, id);
-        List<Question> question_quizz = new ArrayList<>();
-        it.forEach(question_quizz::add);
-        return question_quizz;
+    public List<Question> findQuestionsByGenre(String genre) {
+        Iterable<Question> it = questionDao.findQuestionsByGenre(genre);
+        List<Question> question_genre = new ArrayList<>();
+        it.forEach(question_genre::add);
+        return question_genre;
     }
 
-    public List<Question> findIdByGenre(String genre) {
-        Iterable<Question> it = questionDao.findIdByGenre(genre);
+    public List<Question> findQuestionsById(Long id) {
+        Iterable<Question> it = questionDao.findQuestionsById(id);
         List<Question> question_id = new ArrayList<>();
         it.forEach(question_id::add);
         return question_id;
