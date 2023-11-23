@@ -12,7 +12,7 @@ import java.util.List;
 @Getter
 public class Question {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "question_id_seq")
     private Long id;
     private String contenu;
     private String genre;

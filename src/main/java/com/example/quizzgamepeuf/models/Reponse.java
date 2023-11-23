@@ -8,7 +8,7 @@ import lombok.Getter;
 @Getter
 public class Reponse {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "reponse_id_seq")
     private Long id;
     private String contenu;
     private boolean isgood;

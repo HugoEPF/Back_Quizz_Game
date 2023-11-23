@@ -13,7 +13,7 @@ import java.util.List;
 @Table(name= "quizz")
 public class Quizz {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "quizz_id_seq")
     private Long id;
     private Integer nombre_questions;
     private String genre;

@@ -1,6 +1,6 @@
 create table Utilisateur
 (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     pseudo VARCHAR(255) not null,
     email VARCHAR(255) not null,
     score INTEGER
@@ -36,3 +36,8 @@ create table Reponse
     question_id INTEGER not null
 );
 
+ALTER SEQUENCE utilisateur_id_seq RESTART 100 INCREMENT BY 1;
+ALTER SEQUENCE admin_id_seq RESTART 100 INCREMENT BY 1;
+ALTER SEQUENCE question_id_seq RESTART 100 INCREMENT BY 1;
+ALTER SEQUENCE quizz_id_seq RESTART 100 INCREMENT BY 1;
+ALTER SEQUENCE reponse_id_seq RESTART 100 INCREMENT BY 1;

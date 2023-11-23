@@ -1,4 +1,4 @@
-INSERT INTO utilisateur (id, pseudo, email, score) VALUES (1, 'julesalf', 'jules.alfonsi@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES ( 1, 'julesalf', 'jules.alfonsi@epfedu.fr', 0);
 INSERT INTO utilisateur (id, pseudo, email, score) VALUES (2, 'victorsal', 'victor.salles@epfedu.fr', 0);
 INSERT INTO utilisateur (id, pseudo, email, score) VALUES (3, 'thib', 'thibault.collet@epfedu.fr', 0);
 INSERT INTO utilisateur (id, pseudo, email, score) VALUES (4, 'jade', 'jade@gmail.com', 0);

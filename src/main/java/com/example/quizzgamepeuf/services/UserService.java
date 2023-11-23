@@ -13,6 +13,8 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService {
 
+
+
     private final UserDao userDao;
     public User create(User user) {
         return userDao.save(user);
@@ -30,4 +32,6 @@ public class UserService {
         it.forEach(users::add);
         return users;
     }
+
+
 }

@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 @Table(name= "utilisateur")
 public class User {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator="utilisateur_id_seq")
     @Column
     private Long id;
     @Column
