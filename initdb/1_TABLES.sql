@@ -1,4 +1,4 @@
-create table "user"
+create table Utilisateur
 (
     id SERIAL PRIMARY KEY,
     pseudo VARCHAR(255) not null,

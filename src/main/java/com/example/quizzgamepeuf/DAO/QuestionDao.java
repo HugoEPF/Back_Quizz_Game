@@ -11,6 +11,11 @@ import java.util.List;
 @Repository
     public interface QuestionDao extends JpaRepository<Question, Long> {
     @Query("SELECT q FROM Question q WHERE q.genre = :genre")
+    List<Question> findIdByGenre(@Param("genre") String genre);
+
+    Question save(Question question);
+
+    void deleteById(Long id);
     List<Question> findQuestionsByGenre(@Param("genre") String genre);
 
     @Query("SELECT q FROM Question q WHERE q.id = :id")

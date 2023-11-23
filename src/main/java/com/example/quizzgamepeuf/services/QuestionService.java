@@ -31,4 +31,12 @@ public class QuestionService {
         it.forEach(question_id::add);
         return question_id;
     }
+
+    public Question create(Question question) {
+        return questionDao.save(question);
+    }
+
+    public void deleteById(Long id){
+        questionDao.deleteById(id);
+    }
 }

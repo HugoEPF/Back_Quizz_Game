@@ -1,8 +1,6 @@
 package com.example.quizzgamepeuf.services;
 
-import com.example.quizzgamepeuf.DAO.QuestionDao;
 import com.example.quizzgamepeuf.DAO.QuizzDao;
-import com.example.quizzgamepeuf.models.Question;
 import com.example.quizzgamepeuf.models.Quizz;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +17,14 @@ public class QuizzService {
         List<Quizz> quizz = new ArrayList<>();
         it.forEach(quizz::add);
         return quizz;
+    }
+
+    public Quizz create(Quizz quizz) {
+        return quizzDao.save(quizz);
+    }
+
+    public void deleteById(Long id){
+        quizzDao.deleteById(id);
     }
 
 }

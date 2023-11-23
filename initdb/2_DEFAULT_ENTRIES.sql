@@ -1,8 +1,14 @@
-INSERT INTO "user" (id, pseudo, email, score) VALUES (1, 'julesalf', 'jules.alfonsi@epfedu.fr', 0);
-
-INSERT INTO "user" (id, pseudo, email, score) VALUES (3, 'victorsal', 'victor.salles@epfedu.fr', 0);
-
-INSERT INTO "user" (id, pseudo, email, score) VALUES (2, 'thib', 'thibault.collet@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (1, 'julesalf', 'jules.alfonsi@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (2, 'victorsal', 'victor.salles@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (3, 'thib', 'thibault.collet@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (4, 'jade', 'jade@gmail.com', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (5, 'hug', 'hugo@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (6, 'le_T', 'titi@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (7, 'marmar', 'marion@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (8, 'juju', 'juliette@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (9, 'nico', 'nicolas@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (10, 'pierre', 'pierre@epfedu.fr', 0);
+INSERT INTO utilisateur (id, pseudo, email, score) VALUES (11, 'laura', 'laura@epfedu.fr', 0);
 
 INSERT INTO quizz (id, nombre_questions, genre) VALUES (1, 10, 'Culture générale');
 
