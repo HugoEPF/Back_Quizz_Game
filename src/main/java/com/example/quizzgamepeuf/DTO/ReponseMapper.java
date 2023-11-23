@@ -6,11 +6,11 @@ import com.example.quizzgamepeuf.models.Reponse;
 import java.io.IOException;
 
 public class ReponseMapper {
-   /* public static Reponse fromDto(Reponse dto, Long id) throws IOException {
+    public static Reponse fromDto(Reponse dto, Long id) throws IOException {
         return new Reponse.Builder()
                 .id(id)
                 .contenu(dto.getContenu())
-                .isGood(dto.isGood())
+                .isgood(dto.isIsgood())
                 .question(dto.getQuestion())
                 .build();
     }
@@ -18,8 +18,8 @@ public class ReponseMapper {
     public static ReponseDTO toDto (Reponse reponse){
         return ReponseDTO.builder()
                 .contenu(reponse.getContenu())
-                .isGood(reponse.isGood())
+                .isGood(reponse.isIsgood())
                 .question(reponse.getQuestion())
                 .build();
-    }*/
+    }
 }

@@ -32,6 +32,7 @@ create table Reponse
 (
     id SERIAL PRIMARY KEY,
     contenu VARCHAR(255) not null,
-    isGood BOOLEAN NOT NULL
+    isGood BOOLEAN NOT NULL,
+    question_id INTEGER not null
 );
 

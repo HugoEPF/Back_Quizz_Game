@@ -3,18 +3,15 @@ package com.example.quizzgamepeuf.models;
 import jakarta.persistence.*;
 import lombok.Getter;
 
-/*@Entity
+@Entity
 @Table(name= "reponse")
-@Getter*/
+@Getter
 public class Reponse {
-   /* @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(name = "contenu")
     private String contenu;
-
-    @Column(name = "isGood")
-    private boolean isGood;
+    private boolean isgood;
 
     @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "question_id")
@@ -23,7 +20,7 @@ public class Reponse {
     private Reponse(Builder builder) {
         this.id = builder.id;
         this.contenu = builder.contenu;
-        this.isGood = builder.isGood;
+        this.isgood = builder.isgood;
         this.question = builder.question;
     }
 
@@ -33,7 +30,7 @@ public class Reponse {
     public static class Builder {
         private Long id;
         private String contenu;
-        private boolean isGood;
+        private Boolean isgood;
         private Question question;
 
 
@@ -47,8 +44,8 @@ public class Reponse {
             return this;
         }
 
-        public Builder isGood(boolean isGood) {
-            this.isGood = isGood;
+        public Builder isgood(boolean isgood) {
+            this.isgood = isgood;
             return this;
         }
 
@@ -59,7 +56,7 @@ public class Reponse {
         public Reponse build() {
             return new Reponse(this);
         }
-    }*/
+    }
 
     }
 

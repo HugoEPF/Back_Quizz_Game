@@ -21,8 +21,19 @@ INSERT INTO question (id, contenu, genre) VALUES (1, 'Quel est le félin le plus
 INSERT INTO question (id, contenu, genre) VALUES (2, 'Quel pays a gagné le mondial de foot en 2014', 'Sport');
 INSERT INTO question (id, contenu, genre) VALUES (4, 'Qui a volé la coupe du monde de rugby 2023?', 'Sport');
 INSERT INTO question (id, contenu, genre) VALUES (3, 'De quel groupe faisait partie beyonce?', 'Musique');
+INSERT INTO question (id, contenu, genre) VALUES (13, 'Quel est le film qui marqué des générations en horreur?', 'Cinema');
 
-INSERT INTO reponse(id, contenu, isgood) VALUES (1, 'Jaguard', true);
-INSERT INTO reponse(id, contenu, isgood) VALUES (2, 'Escargot', false);
-INSERT INTO reponse(id, contenu, isgood) VALUES (3, 'Guepard', false);
-INSERT INTO reponse(id, contenu, isgood) VALUES (4, 'Lion', false);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (1, 'Jaguard', true,1);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (2, 'Escargot', false,1);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (3, 'Guepard', false,1);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (4, 'Lion', false,1);
+
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (5, 'France', false,2);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (10, 'Allemagne', true,2);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (22, 'Argentine', false,2);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (6, 'Brésil', false,2);
+
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (20, 'Conjuring', false,13);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (21, 'Bisounours', false,13);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (25, 'La None', false,13);
+INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (37, 'Exorcisme', true,13);
