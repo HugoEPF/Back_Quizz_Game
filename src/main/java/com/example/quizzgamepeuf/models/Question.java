@@ -17,15 +17,15 @@ public class Question {
     private String contenu;
     private String genre;
 
-   // @OneToMany(mappedBy = "reponse")
-   // @JsonIgnore
-    //private List<Reponse> reponses;
+    @OneToMany(mappedBy = "reponse")
+    @JsonIgnore
+    private List<Reponse> reponses;
 
     private Question(Question.Builder builder) {
         this.id = builder.id;
         this.contenu = builder.contenu;
         this.genre = builder.genre;
-        //this.reponses = builder.reponses;
+        this.reponses = builder.reponses;
 
     }
     public Question() {
@@ -35,7 +35,7 @@ public class Question {
         private Long id;
         private String contenu;
         private String genre;
-        //private List<Reponse> reponses;
+        private List<Reponse> reponses;
 
         public Question.Builder id (Long id) {
             this.id = id;
@@ -50,10 +50,10 @@ public class Question {
             return this;
         }
 
-//        public Question.Builder reponses(List<Reponse> reponses) {
-//            this.reponses = reponses;
-//            return this;
-//        }
+        public Question.Builder reponses(List<Reponse> reponses) {
+            this.reponses = reponses;
+            return this;
+        }
         public Question build() {
             return new Question(this);
         }

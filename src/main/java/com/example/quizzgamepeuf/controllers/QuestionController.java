@@ -16,7 +16,7 @@ import java.util.List;
 public class QuestionController {
     @Autowired
     private QuestionService questionService;
-    @GetMapping("all")
+    @GetMapping("")
     public List<Question> listQuestion() {
         return questionService.findAll();
     }
