@@ -1,15 +1,15 @@
 package com.example.quizzgamepeuf.controllers;
 
 
-import com.example.quizzgamepeuf.models.Question;
 import com.example.quizzgamepeuf.models.Reponse;
-import com.example.quizzgamepeuf.services.QuestionService;
 import com.example.quizzgamepeuf.services.ReponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RequestMapping("reponses")
@@ -29,9 +29,25 @@ public class ReponseController {
         return reponseService.findByReponseQuestionId(id);
     }
 
+    @GetMapping("byId/{id}")
+    public Optional<Reponse> findQById(@PathVariable Long id){
+        return reponseService.findById(id);
+    }
+
+
     @GetMapping("isGood/{isgood}")
     public List<Reponse> listReponseQuestionId(@PathVariable Boolean isgood) {
         return reponseService.findByTrueAnswer(isgood);
     }
 
+    @PostMapping
+    public Reponse createReponse(@RequestBody Reponse reponse){
+        return reponseService.create(reponse);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteReponse(@PathVariable Long id) {
+        reponseService.deleteById(id);
+        return ResponseEntity.ok("Reponse deleted successfully");
+    }
 }

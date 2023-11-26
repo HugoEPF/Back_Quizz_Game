@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 @Service
 public class QuestionService {
     @Autowired
@@ -30,5 +32,17 @@ public class QuestionService {
         List<Question> question_id = new ArrayList<>();
         it.forEach(question_id::add);
         return question_id;
+    }
+    public Optional<Question> findById(Long id){
+        return  questionDao.findById(id);
+    }
+
+
+    public Question create(Question question) {
+        return questionDao.save(question);
+    }
+
+    public void deleteById(Long id){
+        questionDao.deleteById(id);
     }
 }

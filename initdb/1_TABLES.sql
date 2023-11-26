@@ -1,6 +1,6 @@
-create table "user"
+create table Utilisateur
 (
-    id SERIAL PRIMARY KEY,
+    id BIGSERIAL PRIMARY KEY,
     pseudo VARCHAR(255) not null,
     email VARCHAR(255) not null,
     score INTEGER
@@ -18,7 +18,8 @@ create table Question
 (
     id SERIAL PRIMARY KEY,
     contenu VARCHAR(255) not null,
-    genre VARCHAR(255) not null
+    genre VARCHAR(255) not null,
+    quizz_id INTEGER not null
 );
 
 create table Quizz
@@ -36,3 +37,8 @@ create table Reponse
     question_id INTEGER not null
 );
 
+ALTER SEQUENCE utilisateur_id_seq RESTART 100 INCREMENT BY 50;
+ALTER SEQUENCE admin_id_seq RESTART 100 INCREMENT BY 50;
+ALTER SEQUENCE question_id_seq RESTART 100 INCREMENT BY 50;
+ALTER SEQUENCE quizz_id_seq RESTART 100 INCREMENT BY 50;
+ALTER SEQUENCE reponse_id_seq RESTART 100 INCREMENT BY 50;
