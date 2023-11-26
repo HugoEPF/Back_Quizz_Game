@@ -3,10 +3,10 @@ package com.example.quizzgamepeuf.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.util.List;
 
+//Même Principe que pour Admin sur les annotations
 @Entity
 @Table(name= "question")
 @Getter
@@ -17,14 +17,17 @@ public class Question {
     private String contenu;
     private String genre;
 
+    // Précise la relation dans la bdd. Le cascade permet d'effectuer des opérations sur les class enfants.
     @OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
     @JsonIgnore
     private List<Reponse> reponses;
 
+    //On précise la relation dans la bdd
     @ManyToOne
     @JoinColumn(name = "quizz_id")
     private Quizz quizz;
 
+    //On définit les getter et setter
     public Long getId() {
         return id;
     }
@@ -65,6 +68,8 @@ public class Question {
         this.quizz = quizz;
     }
 
+
+    //On créé un builder
     private Question(Question.Builder builder) {
         this.id = builder.id;
         this.contenu = builder.contenu;

@@ -1,6 +1,5 @@
 package com.example.quizzgamepeuf.DTO;
 
-import com.example.quizzgamepeuf.models.Question;
 import com.example.quizzgamepeuf.models.Quizz;
 import com.example.quizzgamepeuf.models.Reponse;
 import lombok.Builder;

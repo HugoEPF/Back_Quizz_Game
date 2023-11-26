@@ -17,32 +17,38 @@ import java.util.Optional;
 public class QuestionController {
     @Autowired
     private QuestionService questionService;
+
+    // Récupère toutes les questions
     @GetMapping("")
     public List<Question> listQuestion() {
         return questionService.findAll();
     }
 
-
+    // Récupère les questions par genre
     @GetMapping("byGenre/{genre}")
     public List<Question> findQuestionsByGenre(@PathVariable String genre){
         return questionService.findQuestionsByGenre(genre);
     }
 
+    // Récupère une liste de questions associé à un id de quizz
     @GetMapping("byId/{id}")
     public List<Question> findQuestionsById(@PathVariable Long id){
         return questionService.findQuestionsById(id);
     }
 
+    // Récupère une question par ID
     @GetMapping("{id}")
     public Optional<Question> findQById(@PathVariable Long id){
         return questionService.findById(id);
     }
 
+    // Crée une nouvelle question
     @PostMapping
     public Question CreateQuestion(@RequestBody Question question){
         return questionService.create(question);
     }
 
+    // Supprime une question par ID
     @DeleteMapping("/{questionId}")
     public ResponseEntity<String> deleteQuestion(@PathVariable Long questionId) {
         questionService.deleteById(questionId);

@@ -6,6 +6,8 @@ import com.example.quizzgamepeuf.models.Question;
 import java.io.IOException;
 
 public class QuestionMapper {
+
+    // Convertit un objet QuestionDto en objet Question en spécifiant l'identifiant (id)
     public static Question fromDto(Question dto, Long id) throws IOException {
         return new Question.Builder()
                 .id(id)
@@ -15,6 +17,7 @@ public class QuestionMapper {
                 .build();
     }
 
+    // Convertit un objet Question en objet QuestionDto
     public static QuestionDto toDto (Question question){
         return QuestionDto.builder()
                 .contenu(question.getContenu())

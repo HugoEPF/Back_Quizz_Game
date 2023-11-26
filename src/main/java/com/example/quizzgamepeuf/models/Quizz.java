@@ -3,11 +3,12 @@ package com.example.quizzgamepeuf.models;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 
-import java.time.Instant;
 import java.util.List;
 
+
+//Même principe pour les annotations
+//On définit encore une séquence pour l'id et on précise les relations et colonnes
 @Entity
 @Getter
 @Table(name= "quizz")
@@ -20,11 +21,10 @@ public class Quizz {
     @JsonIgnore
     private List<Question> questions;
 
+    //On définit les getters et setters
     public Long getId() {
         return id;
     }
-
-
 
     public String getGenre() {
         return genre;
@@ -48,6 +48,7 @@ public class Quizz {
         this.questions = questions;
     }
 
+
     private Quizz(Builder builder) {
         this.id = builder.id;
         this.genre = builder.genre;
@@ -56,6 +57,7 @@ public class Quizz {
     public Quizz() {
     }
 
+    //On créé un builder pour les quizz
     public static class Builder {
         private Long id;
         private String genre;
