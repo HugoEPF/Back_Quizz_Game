@@ -40,8 +40,9 @@ public class ReponseService {
     public Optional<Reponse> findById(Long id){
         return  reponseDao.findById(id);
     }
-
-
+    public void deleteById(Long id){
+        reponseDao.deleteById(id);
+    }
     public Reponse create(Reponse reponse){
         return reponseDao.save(reponse);
     }

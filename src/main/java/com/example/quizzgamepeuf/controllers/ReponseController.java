@@ -5,6 +5,7 @@ import com.example.quizzgamepeuf.models.Reponse;
 import com.example.quizzgamepeuf.services.ReponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -44,4 +45,9 @@ public class ReponseController {
         return reponseService.create(reponse);
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteReponse(@PathVariable Long id) {
+        reponseService.deleteById(id);
+        return ResponseEntity.ok("Reponse deleted successfully");
+    }
 }

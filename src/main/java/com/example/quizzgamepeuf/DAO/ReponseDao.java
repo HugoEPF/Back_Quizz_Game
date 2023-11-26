@@ -14,7 +14,7 @@ public interface ReponseDao extends JpaRepository<Reponse, Long> {
     Reponse save(Reponse reponse);
     @Query("SELECT r FROM Reponse r WHERE r.question.id = :questionId")
     List<Reponse> findByReponseQuestionId(@Param("questionId") Long questionId);
-
+    void deleteById(Long id);
 
     @Query("SELECT r FROM Reponse r WHERE r.isgood = :isgood")
     List<Reponse> findByTrueReponse(@Param("isgood") Boolean isgood);
