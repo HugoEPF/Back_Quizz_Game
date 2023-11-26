@@ -22,11 +22,11 @@ INSERT INTO admin (id, nom, prenom, email) VALUES (1, 'fontaine', 'hugo', 'hugo.
 
 INSERT INTO admin (id, nom, prenom, email) VALUES (2, 'bonnefoy', 'paulin', 'paulin.bonnefoy@epfedu.fr');
 
-INSERT INTO question (id, contenu, genre) VALUES (1, 'Quel est le félin le plus rapide au monde?', 'Culture générale');
-INSERT INTO question (id, contenu, genre) VALUES (2, 'Quel pays a gagné le mondial de foot en 2014', 'Sport');
-INSERT INTO question (id, contenu, genre) VALUES (4, 'Qui a volé la coupe du monde de rugby 2023?', 'Sport');
-INSERT INTO question (id, contenu, genre) VALUES (3, 'De quel groupe faisait partie beyonce?', 'Musique');
-INSERT INTO question (id, contenu, genre) VALUES (13, 'Quel est le film qui marqué des générations en horreur?', 'Cinema');
+INSERT INTO question (id, contenu, genre, quizz_id) VALUES (1, 'Quel est le félin le plus rapide au monde?', 'Culture générale', 1);
+INSERT INTO question (id, contenu, genre, quizz_id) VALUES (2, 'Quel pays a gagné le mondial de foot en 2014', 'Sport', 2);
+INSERT INTO question (id, contenu, genre, quizz_id) VALUES (4, 'Qui a volé la coupe du monde de rugby 2023?', 'Sport', 2);
+INSERT INTO question (id, contenu, genre, quizz_id) VALUES (3, 'De quel groupe faisait partie beyonce?', 'Musique', 3);
+INSERT INTO question (id, contenu, genre, quizz_id) VALUES (13, 'Quel est le film qui marqué des générations en horreur?', 'Cinema', 4);
 
 INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (1, 'Jaguard', true,1);
 INSERT INTO reponse(id, contenu, isgood, question_id) VALUES (2, 'Escargot', false,1);

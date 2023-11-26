@@ -15,5 +15,6 @@ public class QuestionDto {
     private String contenu;
     private String genre;
     private List<Reponse> reponses;
+    private Quizz quizz;
 
 }

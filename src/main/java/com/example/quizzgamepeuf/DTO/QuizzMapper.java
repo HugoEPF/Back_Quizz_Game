@@ -6,11 +6,12 @@ import com.example.quizzgamepeuf.models.Quizz;
 import java.io.IOException;
 
 public class QuizzMapper {
-    public static Quizz fromDto(Quizz dto, Long id) throws IOException {
+    public static Quizz fromDto(QuizzDto dto, Long id) throws IOException {
         return new Quizz.Builder()
                 .id(id)
                 .nombre_questions(dto.getNombre_questions())
                 .genre(dto.getGenre())
+                .questions(dto.getQuestions())
                 .build();
     }
 
@@ -18,6 +19,7 @@ public class QuizzMapper {
         return QuizzDto.builder()
                 .nombre_questions(quizz.getNombre_questions())
                 .genre(quizz.getGenre())
+                .questions(quizz.getQuestions())
                 .build();
     }
 }

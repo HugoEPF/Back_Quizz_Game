@@ -10,4 +10,5 @@ import java.util.List;
 public class QuizzDto {
     private Integer nombre_questions;
     private String genre;
+    private List<Question> questions;
 }

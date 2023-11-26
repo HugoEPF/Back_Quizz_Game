@@ -11,6 +11,7 @@ public class QuestionMapper {
                 .id(id)
                 .contenu(dto.getContenu())
                 .genre(dto.getGenre())
+                .quizz(dto.getQuizz())
                 .build();
     }
 
@@ -18,6 +19,7 @@ public class QuestionMapper {
         return QuestionDto.builder()
                 .contenu(question.getContenu())
                 .genre(question.getGenre())
+                .quizz(question.getQuizz())
                 .build();
     }
 }

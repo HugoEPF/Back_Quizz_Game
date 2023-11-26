@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 
@@ -35,5 +36,13 @@ public class ReponseService {
         List<Reponse> reponse = new ArrayList<>();
         it.forEach(reponse::add);
         return reponse;
+    }
+    public Optional<Reponse> findById(Long id){
+        return  reponseDao.findById(id);
+    }
+
+
+    public Reponse create(Reponse reponse){
+        return reponseDao.save(reponse);
     }
 }

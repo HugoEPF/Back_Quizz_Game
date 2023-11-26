@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @CrossOrigin
 @RequestMapping("questions")
@@ -30,6 +31,11 @@ public class QuestionController {
     @GetMapping("byId/{id}")
     public List<Question> findQuestionsById(@PathVariable Long id){
         return questionService.findQuestionsById(id);
+    }
+
+    @GetMapping("{id}")
+    public Optional<Question> findQById(@PathVariable Long id){
+        return questionService.findById(id);
     }
 
     @PostMapping
