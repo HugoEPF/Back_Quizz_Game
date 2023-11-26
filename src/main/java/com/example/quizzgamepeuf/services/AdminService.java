@@ -3,6 +3,7 @@ package com.example.quizzgamepeuf.services;
 import com.example.quizzgamepeuf.DAO.AdminDao;
 import com.example.quizzgamepeuf.models.Admin;
 import com.example.quizzgamepeuf.models.Quizz;
+import com.example.quizzgamepeuf.models.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,9 @@ public class AdminService {
     }
     public Optional<Admin> findById(Long id){
         return  adminDao.findById(id);
+    }
+    public Optional<Admin> findByMail(String mail){
+        return adminDao.findByMail(mail);
     }
     public List<Admin> findAll() {
         Iterable<Admin> it = adminDao.findAll();

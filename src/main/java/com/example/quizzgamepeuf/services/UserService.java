@@ -32,6 +32,8 @@ public class UserService {
         it.forEach(users::add);
         return users;
     }
-
+    public Optional<User> findByMail(String mail){
+        return userDao.findByMail(mail);
+    }
 
 }
