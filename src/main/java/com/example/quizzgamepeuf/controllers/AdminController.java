@@ -1,6 +1,7 @@
 package com.example.quizzgamepeuf.controllers;
 
 import com.example.quizzgamepeuf.models.Admin;
+import com.example.quizzgamepeuf.models.User;
 import com.example.quizzgamepeuf.services.AdminService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,6 +32,10 @@ public class AdminController {
     @GetMapping("/{id}")
     public Optional<Admin> AdminById(@PathVariable Long id){
         return adminService.findById(id);
+    }
+    @GetMapping("/email/{email}")
+    public Optional<Admin> AdminByMail(@PathVariable String email){
+        return adminService.findByMail(email);
     }
 
     @PostMapping
