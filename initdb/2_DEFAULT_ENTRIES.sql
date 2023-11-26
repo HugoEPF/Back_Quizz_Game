@@ -10,13 +10,13 @@ INSERT INTO utilisateur (id, pseudo, email, score) VALUES (9, 'nico', 'nicolas@e
 INSERT INTO utilisateur (id, pseudo, email, score) VALUES (10, 'pierre', 'pierre@epfedu.fr', 0);
 INSERT INTO utilisateur (id, pseudo, email, score) VALUES (11, 'laura', 'laura@epfedu.fr', 0);
 
-INSERT INTO quizz (id, nombre_questions, genre) VALUES (1, 10, 'Culture générale');
+INSERT INTO quizz (id, genre) VALUES (1, 'Culture générale');
 
-INSERT INTO quizz (id, nombre_questions, genre) VALUES (2, 10, 'Sport');
+INSERT INTO quizz (id, genre) VALUES (2, 'Sport');
 
-INSERT INTO quizz (id, nombre_questions, genre) VALUES (3, 10, 'Musique');
+INSERT INTO quizz (id, genre) VALUES (3, 'Musique');
 
-INSERT INTO quizz (id, nombre_questions, genre) VALUES (4, 10, 'Cinema');
+INSERT INTO quizz (id, genre) VALUES (4, 'Cinema');
 
 INSERT INTO admin (id, nom, prenom, email) VALUES (1, 'fontaine', 'hugo', 'hugo.fontaine@epfedu.fr');
 

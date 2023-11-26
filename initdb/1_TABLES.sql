@@ -25,7 +25,6 @@ create table Question
 create table Quizz
 (
     id SERIAL PRIMARY KEY,
-    nombre_questions INTEGER not null,
     genre VARCHAR(255) not null
 );
 

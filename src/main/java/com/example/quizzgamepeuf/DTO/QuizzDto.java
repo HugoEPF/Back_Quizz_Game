@@ -8,7 +8,6 @@ import java.util.List;
 @Builder
 @Getter
 public class QuizzDto {
-    private Integer nombre_questions;
     private String genre;
     private List<Question> questions;
 }

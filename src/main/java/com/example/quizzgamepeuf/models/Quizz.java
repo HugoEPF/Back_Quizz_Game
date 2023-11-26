@@ -15,7 +15,6 @@ public class Quizz {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "quizz_id_seq")
     private Long id;
-    private Integer nombre_questions;
     private String genre;
     @OneToMany(mappedBy = "quizz", cascade = CascadeType.ALL)
     @JsonIgnore
@@ -25,9 +24,7 @@ public class Quizz {
         return id;
     }
 
-    public Integer getNombre_questions() {
-        return nombre_questions;
-    }
+
 
     public String getGenre() {
         return genre;
@@ -41,9 +38,7 @@ public class Quizz {
         this.id = id;
     }
 
-    public void setNombre_questions(Integer nombre_questions) {
-        this.nombre_questions = nombre_questions;
-    }
+
 
     public void setGenre(String genre) {
         this.genre = genre;
@@ -55,7 +50,6 @@ public class Quizz {
 
     private Quizz(Builder builder) {
         this.id = builder.id;
-        this.nombre_questions = builder.nombre_questions;
         this.genre = builder.genre;
         this.questions=builder.questions;
     }
@@ -64,7 +58,6 @@ public class Quizz {
 
     public static class Builder {
         private Long id;
-        private Integer nombre_questions;
         private String genre;
 
         private List<Question> questions;
@@ -73,10 +66,7 @@ public class Quizz {
             this.id = id;
             return this;
         }
-        public Builder nombre_questions(Integer nombre_questions) {
-            this.nombre_questions = nombre_questions;
-            return this;
-        }
+
         public Builder genre(String genre) {
             this.genre = genre;
             return this;
